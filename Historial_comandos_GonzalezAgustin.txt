@@ -1,0 +1,103 @@
+pwd
+ssh-keygen
+cat $HOME/.ssh/*pub
+cd
+mkdir repogit
+cd repogit
+ls
+ls -l
+git clone git@github.com:aagustingonzalez/TP_AySO.git
+cd TP_AySO/
+pwd
+ls -l
+cat /etc/passwd
+man grep
+grep UBUNTU /etc/passwd
+grep ubuntu /etc/passwd
+grep -i Ubuntu /etc/passwd
+grep -i ubuntu /etc/passwd | awk -F: '{print $2}' > datos_usuario.txt
+whoami
+echo "Usuario=$(whoami)" >> datos_usuario.txt
+cat datos_usuario.txt
+git add.
+git --help
+pwd
+git status
+git add .
+git config --global user.email "aagustingonzalez.4@gmail.com"
+git config --global user.name "aagustingonzalez"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+cat /proc/cpuinfo
+grep "model name" /proc/cpuinfo
+grep "model name" /proc/cpuinfo | head -n1
+grep "model name" /proc/cpuinfo | head -n1 > info_pc.txt
+cat info_pc.txt
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+git status
+git push 
+pwd
+cat /etc/passwd
+grep -v "nologin" /etc/passwd
+grep -v "nologin" /etc/passwd | head -n10
+man sort
+grep -v "nologin" /etc/passwd | head -n10 | sort -t: -k7
+grep -v "nologin" /etc/passwd | head -n10 | sort -t: -k7 > lista_ordenada
+cat lista_ordenada
+git add .
+git commit -m "ADD: Listado de usuarios ordenada"
+cat README.md
+cat << EOF
+texto
+EOF
+
+cat << FIN
+linea 1
+linea 2
+FIN
+
+cat << EOF >> README.md
+Alumno: TuNombre TuApellido
+División: TuDivisión
+Turno: TuTurno
+EOF
+
+cat -n README.md
+echo "# TP_AySO" > README.md
+cat << EOF >> README.md
+Alumno: TuApellido TuNombre
+División: TuDivisión
+Turno: TuTurno
+
+EOF
+
+pwd
+cat -n README.md
+echo "# TP_AySO" > README.md
+cat << EOF >> README.md
+Alumno: Gonzalez Agustin
+División: 116º
+Turno: Mañana
+EOF
+
+cat README.md
+git add .
+git commit --amend -m "docs: agregando información del alumno al README"
+git push
+cd ~
+mkdir -p ~/TP1/arquitectura/Clase{1,2,3,4,5} ~/TP1/so/Clase{1,2,3,4,5,6}
+ls ~/TP1/arquitectura
+ls ~/TP1/so
+cd ~/repogit/TP_AySO
+echo '#!/bin/bash' > script_dir.sh
+echo 'mkdir -p ~/TP1/arquitectura/Clase{1,2,3,4,5} ~/TP1/so/Clase{1,2,3,4,5,6}' >> script_dir.sh
+cat script_dir.sh
+chmod +x script_dir.sh
+ls -l script_dir.sh
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+cd ~/repogit/TP_AySO
+history -a
